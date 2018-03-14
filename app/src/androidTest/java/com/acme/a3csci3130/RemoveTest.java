@@ -33,7 +33,13 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by mattrbrousseau on 14/03/18.
+ * This is the final test that should be run. It starts at the main activity
+ * then goes to the first item in the list and removes it 
+ *
+ * useAppContext checks to see if the right package is being used
+ * testCreate creates the test
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 
 public class RemoveTest {
@@ -47,6 +53,9 @@ public class RemoveTest {
 
         assertEquals("com.acme.a3csci3130", appContext.getPackageName());
     }
+    /**
+    * Run test
+    */
     @Test
     public void testRetrieve() throws Exception {
         SystemClock.sleep(1500);
