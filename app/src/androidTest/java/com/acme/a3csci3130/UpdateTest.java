@@ -33,7 +33,14 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by mattrbrousseau on 14/03/18.
+ * This is the third test that should be run. It starts at the main activity
+ * and clicks on the first entry in the database, which should be the same that
+ * was used previously. It then changes the name and submits the changes.
+ *
+ * useAppContext checks to see if the right package is being used
+ * testCreate creates the test
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 
 public class UpdateTest {
@@ -47,6 +54,9 @@ public class UpdateTest {
 
         assertEquals("com.acme.a3csci3130", appContext.getPackageName());
     }
+    /**
+    * run test
+    */
     @Test
     public void testRetrieve() throws Exception {
         SystemClock.sleep(1500);
