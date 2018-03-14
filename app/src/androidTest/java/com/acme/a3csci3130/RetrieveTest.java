@@ -31,7 +31,15 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by mattrbrousseau on 14/03/18.
+ * This is the second test that should be run. It starts at the main activity
+ * and clicks on the first item in the list, which should be the item created 
+ * in the first Espresso test. It then verifies that all the data added to 
+ * the contact is there and retrieves it.
+ *
+ * useAppContext checks to see if the right package is being used
+ * testCreate creates the test
+ *
+ * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 
 public class RetrieveTest {
@@ -45,6 +53,9 @@ public class RetrieveTest {
 
         assertEquals("com.acme.a3csci3130", appContext.getPackageName());
     }
+    /**
+    *Creates test
+    */
     @Test
     public void testRetrieve() throws Exception {
         onView(withId(R.id.listView));
