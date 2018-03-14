@@ -26,7 +26,13 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
 /**
- * Instrumentation test, which will execute on an Android device.
+ * This is the first test that should be run. It starts at the main activity
+ * and creates a Contact and adds it to the database. I used sleep because 
+ * it would sometimes take a bit longer for everything to load and would get
+ * an error saying the test failed if I didn't
+ *
+ * useAppContext checks to see if the right package is being used
+ * testCreate creates the test
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
@@ -42,6 +48,10 @@ public class CreateTest {
 
         assertEquals("com.acme.a3csci3130", appContext.getPackageName());
     }
+    /**
+    * Creates test
+    *
+    */
     @Test
     public void testCreate() throws Exception {
         SystemClock.sleep(1500);
