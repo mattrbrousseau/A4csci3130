@@ -23,4 +23,20 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.acme.a3csci3130", appContext.getPackageName());
     }
+    @Test
+    public void testCreate() throws Exception {
+
+    }
+    @Test
+    public void testUpdate() throws Exception {
+
+    }
+    @Test
+    public void testDelete() throws Exception {
+
+    }
+    @Test
+    public void testRetrieve() throws Exception {
+
+    }
 }

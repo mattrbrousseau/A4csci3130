@@ -9,23 +9,29 @@ import java.util.Map;
 
 /**
  * Class that defines how the data will be stored in the
- * Firebase databse. This is converted to a JSON format
+ * Firebase database. This is converted to a JSON format
  */
 
 public class Contact implements Serializable {
 
     public  String uid;
     public  String name;
-    public  String email;
+    public  String number;
+    public  String address;
+    public  String province;
+    public  String business;
 
     public Contact() {
         // Default constructor required for calls to DataSnapshot.getValue
     }
 
-    public Contact(String uid, String name, String email){
+    public Contact(String uid, String name, String number, String address, String province, String business){
         this.uid = uid;
         this.name = name;
-        this.email = email;
+        this.number = number;
+        this.address = address;
+        this.province = province;
+        this.business = business;
     }
 
     @Exclude
@@ -33,7 +39,10 @@ public class Contact implements Serializable {
         HashMap<String, Object> result = new HashMap<>();
         result.put("uid", uid);
         result.put("name", name);
-        result.put("email", email);
+        result.put("number", number);
+        result.put("address", address);
+        result.put("province", province);
+        result.put("business", business);
 
         return result;
     }

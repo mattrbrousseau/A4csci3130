@@ -1,5 +1,4 @@
 package com.acme.a3csci3130;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,7 +32,7 @@ public class MainActivity extends Activity {
         contactListView = (ListView) findViewById(R.id.listView);
 
         //Set up the List View
-       firebaseAdapter = new FirebaseListAdapter<Contact>(this, Contact.class,
+        firebaseAdapter = new FirebaseListAdapter<Contact>(this, Contact.class,
                 android.R.layout.simple_list_item_1, appData.firebaseReference) {
             @Override
             protected void populateView(View v, Contact model, int position) {
