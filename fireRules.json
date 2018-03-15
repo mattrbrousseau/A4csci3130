@@ -4,6 +4,7 @@
     ".read" : true,
     "contacts": {
       "$contact": {
+        ".validate": "newData.hasChild('name') && newData.hasChild('business') && newData.hasChild('number')",
         "number": {
           ".validate": "newData.val().length == 9 && newData.val().matches(/^[0-9]*$/)"
         },
